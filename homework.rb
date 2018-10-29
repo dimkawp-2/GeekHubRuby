@@ -83,11 +83,11 @@ class RaceTrack
     sleep 2
     array = [
         {name: HorsesBD.new.lucky[:name], value: rand(HorsesBD.new.lucky[:speed]) +
-            rand(HorsesBD.new.lucky[:speed])},
+                                                 rand(HorsesBD.new.lucky[:speed])},
         {name: HorsesBD.new.flash[:name], value: rand(HorsesBD.new.flash[:speed]) +
-            rand(HorsesBD.new.lucky[:speed])},
+                                                 rand(HorsesBD.new.lucky[:speed])},
         {name: HorsesBD.new.speed[:name], value: rand(HorsesBD.new.speed[:speed]) +
-            rand(HorsesBD.new.lucky[:speed])}
+                                                 rand(HorsesBD.new.lucky[:speed])}
     ]
     array = array.sort_by { |hsh| hsh[:value] }
     array = array.reverse
