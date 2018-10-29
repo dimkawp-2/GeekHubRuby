@@ -7,12 +7,12 @@ class RaceTrack
     first_dialog(name)
     answer = gets.chomp
     case answer
-      when "bet"
-        bet
-      when "info"
-        info_block
-      else
-        p "you answer: #{answer}, need write 'bet' or 'info'"
+    when "bet"
+      bet
+    when "info"
+      info_block
+    else
+      p "you answer: #{answer}, need write 'bet' or 'info'"
     end
   end
   def first_dialog(name)
@@ -49,14 +49,14 @@ class RaceTrack
     p "#Speed 1.5 : 1"
     bet_horse_name = gets.chomp
     case bet_horse_name
-      when "Lucky"
-        p "Risk rate"
-      when "Flash"
-        p "Good choice"
-      when "Speed"
-        p "Great choice"
-      else
-        bet
+    when "Lucky"
+      p "Risk rate"
+    when "Flash"
+      p "Good choice"
+    when "Speed"
+      p "Great choice"
+    else
+      bet
     end
       p "Total ?"
       total = gets.chomp
@@ -134,14 +134,14 @@ class RaceTrack
     if winner_name == array[0][:name]
       HorsesImg.new.winner_img
       case winner_name
-        when 'Lucky'
-          p "You win total x3 #{total.to_i * 3}"
-        when 'Flash'
-          p "You win total x3 #{total.to_i * 2}"
-        when 'Speed'
-          p "You win total x3 #{total.to_i * 1.5}"
-        else
-          p "You lose your total #{total}"
+      when 'Lucky'
+        p "You win total x3 #{total.to_i * 3}"
+      when 'Flash'
+        p "You win total x3 #{total.to_i * 2}"
+      when 'Speed'
+        p "You win total x3 #{total.to_i * 1.5}"
+      else
+        p "You lose your total #{total}"
       end
     else
       p "You lose your total #{total}"
