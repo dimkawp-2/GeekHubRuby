@@ -298,7 +298,8 @@ class MathTasks
     end
     #task 40
     def task_40(x:, y:)
-      { result: x = 0 if x <= y }
+      result = x = 0 if x <= y
+      { result: result }
     end
     #task 41
     def task_41(x:, y:, z:)
@@ -311,9 +312,76 @@ class MathTasks
       { interval_x: case x when x > 0 then x** end,
         interval_y: case y when y > 0 then y** end
         interval_z: case z when z > 0 then z** end }
-    end
     #task 62
     def task_62(number:)
       { result: number.even? }
     end
+end
+#task 986 game 'GuessTheNumber'
+class GuessTheNumber
+  def start
+    p "WELCOME to the game 'GuessTheNumber'"
+    random_result_value = rand(1..10)
+    p "Write your name:"
+    name = gets.chomp
+    info(name)
+    sleep 3
+    p "Write first_attempt 1..10"
+    first_attempt = gets.chomp
+    if first_attempt > random_result_value
+      p "first_attempt > random_result_value" 
+      second_attempt = gets.chomp
+      if second_attempt > random_result_value
+        p "second_attempt > random_result_value" 
+        third_attempt = gets.chomp
+        if third_attempt > random_result_value
+          p "third_attempt > random_result_value you lose"
+        if third_attempt < random_result_value
+          p "third_attempt < random_result_value you lose"
+        if third_attempt == random_result_value
+          winner(name)
+      if second_attempt < random_result_value
+        p "second_attempt < random_result_value" 
+        third_attempt = gets.chomp
+        if third_attempt > random_result_value
+          p "third_attempt > random_result_value you lose"
+        if third_attempt < random_result_value
+          p "third_attempt < random_result_value you lose"
+        if third_attempt == random_result_value
+          winner(name)
+      if second_attempt == random_result_value
+        winner(name)
+    if first_attempt < random_result_value
+      p "first_attempt < random_result_value" 
+      second_attempt = gets.chomp
+      if second_attempt > random_result_value
+        p "second_attempt > random_result_value" 
+        third_attempt = gets.chomp
+        if third_attempt > random_result_value
+          p "third_attempt > random_result_value you lose"
+        if third_attempt < random_result_value
+          p "third_attempt < random_result_value you lose"
+        if third_attempt == random_result_value
+          winner(name)
+      if second_attempt < random_result_value
+        p "second_attempt < random_result_value" 
+        third_attempt = gets.chomp
+        if third_attempt > random_result_value
+          p "third_attempt > random_result_value you lose"
+        if third_attempt < random_result_value
+          p "third_attempt < random_result_value you lose"
+        if third_attempt == random_result_value
+          winner(name)
+      if second_attempt == random_result_value
+        winner(name)
+    if first_attempt == random_result_value
+      winner(name)
+  end
+  def info(name)
+    p "Ok #{name} The program made a number."
+    p "You have 3 attempts to give the correct answer"
+  end
+  def winner(name)
+    p "Your win #{name}"
+  end
 end
