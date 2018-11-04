@@ -293,7 +293,7 @@ class MathTasks
       { result: x > y ? x - y : y - x + 1 }
     end
     #task 39
-    def an_instance4(x:, y:)
+    def task_39(x:, y:)
       { reuslt: x > y ? x : [x, y] }
     end
     #task 40
