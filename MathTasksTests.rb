@@ -28,27 +28,27 @@ class Test
     assert(expected: expected_result, actual: MathTasks.new.task_06(leg_x: 0,leg_y: 12))
   end
   def task_10_test
-    expected_result = {time: 'result'}
+    expected_result = {time: 12}
     assert(expected: expected_result, actual: MathTasks.new.task_10(mass: 10,height: 120))
   end
   def task_12_test
-    expected_result = {square: 'result'}
+    expected_result = {square: 3}
     assert(expected: expected_result, actual: MathTasks.new.task_12(length: 10))
   end
   def task_13_test
-    expected_result = {result: 'result'}
+    expected_result = {result: 2}
     assert(expected: expected_result, actual: MathTasks.new.task_13(length: 10))
   end
   def task_16_test
-    expected_result = {result: 'result'}
+    expected_result = {result: 10}
     assert(expected: expected_result, actual: MathTasks.new.task_16(length: 10))
   end
   def task_17_test
-    expected_result = {result: 'result'}
+    expected_result = {result: 12}
     assert(expected: expected_result, actual: MathTasks.new.task_17(radius: 10))
   end
   def task_24_test
-    expected_result = {result: 'result'}
+    expected_result = {result: 3}
     assert(expected: expected_result, actual: MathTasks.new.task_24(x_1: 1, x_2: 2, y_1: 2, y_2: 3))
   end
   def task_33_test
